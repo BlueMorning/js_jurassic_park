@@ -42,4 +42,16 @@ Park.prototype.getDinosaurByOffSpring = function (offSpring){
     return dinosaurOffSpring;
 }
 
+Park.prototype.calculateDinosaurPopulationInXYears = function (nYears){
+ 
+    let dinosaurCount = 0;
+    for(dinosaur of this.enclosure){
+        for(year = 0; year <= nYears; year++){
+            dinosaurCount += dinosaur.getOffSpring()**year; 
+        }
+    }
+    
+    return dinosaurCount;
+}
+
 module.exports = Park;

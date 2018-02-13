@@ -57,4 +57,15 @@ describe("Park", function(){
         assert.equal(2, dinosaurByOffSpring.length);
     })
     
+    
+    it("should be able to calcultate the population of dinosaur in X years", function() {
+        
+        park.addDinosaur(dinausaur1);
+        park.addDinosaur(dinausaur2);
+        park.addDinosaur(dinausaur3);
+        
+        assert.strictEqual(129, park.calculateDinosaurPopulationInXYears(3));
+        
+    })
+    
 })
