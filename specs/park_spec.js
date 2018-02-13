@@ -16,4 +16,8 @@ describe("Park", function(){
     })
     
     
+    it("should have an enclosure", function() {
+        assert.strictEqual(park.getDinosaurCount(), 0);
+    })
+    
 })
