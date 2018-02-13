@@ -30,4 +30,16 @@ Park.prototype.removeDinosaurByType = function (type){
     this.enclosure = dinosaursWhichRemain;
 }
 
+Park.prototype.getDinosaurByOffSpring = function (offSpring){
+    
+    let dinosaurOffSpring = new Array(0);
+    for(dinosaur of this.enclosure){
+        if(dinosaur.getOffSpring() >= offSpring){
+            dinosaurOffSpring.push(dinosaur)
+           }
+    }
+    
+    return dinosaurOffSpring;
+}
+
 module.exports = Park;
