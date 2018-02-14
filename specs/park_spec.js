@@ -64,7 +64,7 @@ describe("Park", function(){
         park.addDinosaur(dinausaur2);
         park.addDinosaur(dinausaur3);
         
-        assert.strictEqual(129, park.calculateDinosaurPopulationInXYears(3));
+        assert.strictEqual(197, park.calculateDinosaurPopulationInXYears(3));
         
     })
     

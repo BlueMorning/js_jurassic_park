@@ -46,9 +46,7 @@ Park.prototype.calculateDinosaurPopulationInXYears = function (nYears){
  
     let dinosaurCount = 0;
     for(dinosaur of this.enclosure){
-        for(year = 0; year <= nYears; year++){
-            dinosaurCount += dinosaur.getOffSpring()**year; 
-        }
+        dinosaurCount += (dinosaur.offspring+1)**nYears;
     }
     
     return dinosaurCount;
